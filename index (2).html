@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alan Bonilla Santos — Engineering Portfolio</title>
+  <meta name="description" content="Mechanical Engineering Student at Boston University | Adaptive Optics, Rocket Propulsion & Biomedical Imaging Research" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800;900&family=Barlow:wght@300;400;500;600&family=Barlow+Condensed:wght@400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ── NAV ── -->
+  <nav id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo"><span class="lb">[</span>ABS<span class="lb">]</span></a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#research">Research</a></li>
+        <li><a href="#achievements">Awards</a></li>
+        <li><a href="#contact" class="nav-cta">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ══════════════════════════════════════════
+       HERO
+  ══════════════════════════════════════════ -->
+  <section id="hero">
+    <canvas id="starfield"></canvas>
+    <div class="hero-grid-overlay"></div>
+    <div class="scan-line"></div>
+
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        <span>BOSTON UNIVERSITY · MECHANICAL ENGINEERING · CLASS OF 2028</span>
+      </div>
+
+      <h1 class="hero-name">
+        <span class="name-first">Alan</span>
+        <span class="name-last">Bonilla Santos</span>
+      </h1>
+
+      <div class="hero-title-wrap">
+        <span class="hero-title-sym">_</span>
+        <h2 class="hero-title" id="typewriter"></h2>
+        <span class="cursor-blink">|</span>
+      </div>
+
+      <p class="hero-tagline">
+        Building systems that push the boundaries of<br />
+        <span class="accent-amber">engineering and space exploration</span>
+      </p>
+
+      <div class="hero-stats">
+        <div class="stat"><span class="stat-n">96×</span><span class="stat-l">Throughput Scale-Up</span></div>
+        <div class="stat-div"></div>
+        <div class="stat"><span class="stat-n">1/50px</span><span class="stat-l">Localization Accuracy</span></div>
+        <div class="stat-div"></div>
+        <div class="stat"><span class="stat-n">3×</span><span class="stat-l">National 1st Place</span></div>
+        <div class="stat-div"></div>
+        <div class="stat"><span class="stat-n">ERN</span><span class="stat-l">2026 Presenter</span></div>
+      </div>
+
+      <div class="hero-buttons">
+        <a href="#projects" class="btn btn-primary"><i class="fas fa-rocket"></i> View Projects</a>
+        <a href="Alan_Resume__5_.pdf" class="btn btn-secondary" download><i class="fas fa-download"></i> Download Resume</a>
+      </div>
+
+      <div class="scroll-indicator">
+        <span>SCROLL</span>
+        <div class="scroll-line"></div>
+      </div>
+    </div>
+
+    <div class="corner corner-tl"></div>
+    <div class="corner corner-tr"></div>
+    <div class="corner corner-bl"></div>
+    <div class="corner corner-br"></div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       ABOUT
+  ══════════════════════════════════════════ -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="section-label">/ 01 · ABOUT ME</div>
+
+      <div class="about-grid">
+
+        <!-- Photo Column -->
+        <div class="about-photo-col reveal">
+          <div class="photo-frame">
+            <!--
+              ╔══════════════════════════════════════╗
+              ║  ADD YOUR PHOTO HERE                 ║
+              ║  Replace the div.photo-placeholder   ║
+              ║  with:                               ║
+              ║  <img src="images/alan.jpg"          ║
+              ║       alt="Alan Bonilla Santos"      ║
+              ║       class="profile-photo" />       ║
+              ╚══════════════════════════════════════╝
+            -->
+            <div class="photo-placeholder">
+              <i class="fas fa-user-astronaut"></i>
+              <span>Add your photo here<br/><small>Replace with &lt;img&gt; tag<br/>See guide below</small></span>
+            </div>
+            <div class="photo-frame-corner ptl"></div>
+            <div class="photo-frame-corner ptr"></div>
+            <div class="photo-frame-corner pbl"></div>
+            <div class="photo-frame-corner pbr"></div>
+          </div>
+
+          <!-- Quick facts pill stack -->
+          <div class="quick-facts">
+            <div class="qf-item"><i class="fas fa-map-marker-alt"></i> Boston, MA · Houston origin</div>
+            <div class="qf-item"><i class="fas fa-language"></i> English & Spanish (Fluent)</div>
+            <div class="qf-item"><i class="fas fa-calendar-alt"></i> BU Class of 2028</div>
+          </div>
+        </div>
+
+        <!-- Text Column -->
+        <div class="about-text reveal reveal-delay">
+          <h2 class="section-title">Engineering<br /><span class="accent">From Ground Up</span></h2>
+
+          <p class="about-para">
+            I'm a <strong>Mechanical Engineering student at Boston University</strong> (Nanotechnology concentration) doing research at the intersection of precision optics, biomedical engineering, and aerospace propulsion. As a <strong>QuestBridge Scholar</strong> and first-generation college student, I approach every project with the same drive: build things that actually work and matter.
+          </p>
+          <p class="about-para">
+            In the <strong>Bifano Lab at BU Photonics Center</strong>, I develop MATLAB algorithms for sub-pixel bead localization in engineered cardiac tissue — scaling throughput from 1 to 96 simultaneous samples and achieving accuracy within 1/50th of a pixel. In parallel, at <strong>BURPG</strong>, I simulate rocket aerodynamics and design hybrid rocket nozzles, validated through FEA and isentropic flow analysis.
+          </p>
+          <p class="about-para">
+            I believe engineering is a tool for expanding what's possible — in the cleanroom, in space, and in the communities I come from.
+          </p>
+
+          <div class="about-tags">
+            <span class="tag"><i class="fas fa-microscope"></i> Adaptive Optics</span>
+            <span class="tag"><i class="fas fa-rocket"></i> Aerospace</span>
+            <span class="tag"><i class="fas fa-atom"></i> Nanofabrication</span>
+            <span class="tag"><i class="fas fa-code"></i> MATLAB · Python</span>
+            <span class="tag"><i class="fas fa-heart-pulse"></i> Biomedical</span>
+          </div>
+
+          <div class="about-affiliations">
+            <div class="affil"><div class="affil-dot cyan"></div><span>BU Photonics Center — Bifano Lab</span></div>
+            <div class="affil"><div class="affil-dot amber"></div><span>CELL-MET NSF Engineering Research Center</span></div>
+            <div class="affil"><div class="affil-dot red"></div><span>Boston University Rocket Propulsion Group (BURPG)</span></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       SKILLS
+  ══════════════════════════════════════════ -->
+  <section id="skills" class="section section-alt">
+    <div class="container">
+      <div class="section-label">/ 02 · CAPABILITIES</div>
+      <h2 class="section-title reveal">Full Technical <span class="accent">Skillset</span></h2>
+      <p class="section-subtitle reveal">Every tool and technique from my resume — in one place</p>
+
+      <div class="skills-master reveal">
+
+        <!-- Programming & Software -->
+        <div class="skill-group">
+          <div class="skill-group-header">
+            <span class="sg-icon cyan"><i class="fas fa-terminal"></i></span>
+            <span class="sg-title">Programming & Software</span>
+          </div>
+          <div class="skill-pills">
+            <span class="pill pill-cyan pill-lg">MATLAB</span>
+            <span class="pill pill-cyan pill-lg">Simulink</span>
+            <span class="pill pill-cyan">Python</span>
+            <span class="pill pill-cyan">C++</span>
+            <span class="pill pill-cyan">Arduino (C)</span>
+          </div>
+        </div>
+
+        <!-- CAD & Simulation -->
+        <div class="skill-group">
+          <div class="skill-group-header">
+            <span class="sg-icon amber"><i class="fas fa-drafting-compass"></i></span>
+            <span class="sg-title">CAD & Simulation</span>
+          </div>
+          <div class="skill-pills">
+            <span class="pill pill-amber pill-lg">SolidWorks</span>
+            <span class="pill pill-amber pill-lg">FEA Simulation</span>
+            <span class="pill pill-amber">Onshape</span>
+            <span class="pill pill-amber">CAD Modeling</span>
+            <span class="pill pill-amber">OpenRocket</span>
+            <span class="pill pill-amber">RASAero</span>
+          </div>
+        </div>
+
+        <!-- Manufacturing -->
+        <div class="skill-group">
+          <div class="skill-group-header">
+            <span class="sg-icon green"><i class="fas fa-cogs"></i></span>
+            <span class="sg-title">Manufacturing</span>
+          </div>
+          <div class="skill-pills">
+            <span class="pill pill-green pill-lg">3D Printing</span>
+            <span class="pill pill-green">PCB Design</span>
+            <span class="pill pill-green">Soldering</span>
+            <span class="pill pill-green">Laser Alignment</span>
+            <span class="pill pill-green">Optical Calibration</span>
+          </div>
+        </div>
+
+        <!-- Laboratory & Nanofab -->
+        <div class="skill-group">
+          <div class="skill-group-header">
+            <span class="sg-icon purple"><i class="fas fa-microscope"></i></span>
+            <span class="sg-title">Laboratory & Nanofabrication</span>
+          </div>
+          <div class="skill-pills">
+            <span class="pill pill-purple pill-lg">Photolithography</span>
+            <span class="pill pill-purple pill-lg">Cleanroom Procedures</span>
+            <span class="pill pill-purple">Spin Coating</span>
+            <span class="pill pill-purple">UV Exposure</span>
+            <span class="pill pill-purple">Metal Deposition (Ti/Au)</span>
+            <span class="pill pill-purple">Lift-Off Process</span>
+          </div>
+        </div>
+
+        <!-- Optics & Imaging -->
+        <div class="skill-group">
+          <div class="skill-group-header">
+            <span class="sg-icon cyan"><i class="fas fa-eye"></i></span>
+            <span class="sg-title">Optics & Imaging</span>
+          </div>
+          <div class="skill-pills">
+            <span class="pill pill-cyan pill-lg">Adaptive Optics</span>
+            <span class="pill pill-cyan">Wavefront Sensing</span>
+            <span class="pill pill-cyan">Sub-pixel Localization</span>
+            <span class="pill pill-cyan">Gaussian Fitting</span>
+            <span class="pill pill-cyan">MEMS Deformable Mirrors</span>
+            <span class="pill pill-cyan">Fluorescence Microscopy</span>
+          </div>
+        </div>
+
+        <!-- Aerospace -->
+        <div class="skill-group">
+          <div class="skill-group-header">
+            <span class="sg-icon amber"><i class="fas fa-rocket"></i></span>
+            <span class="sg-title">Aerospace & Propulsion</span>
+          </div>
+          <div class="skill-pills">
+            <span class="pill pill-amber pill-lg">Isentropic Flow Analysis</span>
+            <span class="pill pill-amber">Stability Analysis</span>
+            <span class="pill pill-amber">Nozzle Design</span>
+            <span class="pill pill-amber">Flight Simulation</span>
+            <span class="pill pill-amber">Fin Optimization</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       PROJECTS
+  ══════════════════════════════════════════ -->
+  <section id="projects" class="section">
+    <div class="container">
+      <div class="section-label">/ 03 · PROJECTS</div>
+      <h2 class="section-title reveal">Featured <span class="accent">Work</span></h2>
+      <p class="section-subtitle reveal">From optical systems to rocket propulsion — built, tested, and validated</p>
+
+      <!-- ── PROJECT 1: MEMS ── -->
+      <article class="project-feature reveal" id="proj-mems">
+        <div class="pf-media">
+          <!--
+            ADD IMAGE: Replace .pf-placeholder with:
+            <img src="images/mems-mirror.jpg" alt="MEMS Deformable Mirror" class="pf-img" />
+            Suggested: Screenshot from the OE paper Fig. 1 or your own lab photo
+            Paper source: https://sites.bu.edu/bifano/files/2021/11/oe-29-21-33741.pdf
+          -->
+          <div class="pf-placeholder mems-bg">
+            <i class="fas fa-circle-nodes"></i>
+            <span>MEMS Deformable Mirror</span>
+            <small>Add lab photo here · See guide</small>
+          </div>
+          <div class="pf-num">01</div>
+        </div>
+        <div class="pf-content">
+          <div class="pf-tags">
+            <span class="ptag">Adaptive Optics</span>
+            <span class="ptag">MATLAB</span>
+            <span class="ptag">MEMS</span>
+            <span class="ptag">Boston Micromachines</span>
+          </div>
+          <h3 class="pf-title">MEMS Deformable Mirror System</h3>
+          <p class="pf-desc">Operated MEMS deformable mirrors (Boston Micromachines) to shape optical wavefronts and control light direction with micron-level precision. Developed MATLAB scripts for mirror actuation, surface-response characterization, and adaptive imaging system calibration.</p>
+
+          <div class="pf-specs">
+            <div class="spec"><span class="spec-label">Lab</span><span class="spec-val">BU Photonics Center</span></div>
+            <div class="spec"><span class="spec-label">Technique</span><span class="spec-val">PAW Wavefront Sensing</span></div>
+            <div class="spec"><span class="spec-label">Reference</span><span class="spec-val">Bifano et al., Optica 2015</span></div>
+          </div>
+
+          <div class="pf-actions">
+            <button class="btn btn-primary btn-sm" onclick="openModal('mems')"><i class="fas fa-expand-alt"></i> Full Case Study</button>
+            <a href="https://sites.bu.edu/bifano/files/2021/11/oe-29-21-33741.pdf" target="_blank" rel="noopener" class="btn btn-secondary btn-sm"><i class="fas fa-file-pdf"></i> Related Paper</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- ── PROJECT 2: TISSUE MICROSCOPE ── -->
+      <article class="project-feature reveal pf-reverse" id="proj-microscope">
+        <div class="pf-media">
+          <!-- Real research images from the ERN poster -->
+          <div class="pf-gallery">
+            <div class="gallery-main">
+              <img src="images/Bead_Images.jpg" alt="Fluorescent bead images — sub-pixel localization" />
+              <div class="gallery-caption">Fluorescent beads imaged across 96-well plates</div>
+            </div>
+            <div class="gallery-thumbs">
+              <div class="thumb" onclick="setGalleryMain('micro', 'images/Gaussian_Fitted_Bead.jpg', 'Gaussian-fitted bead center detection')">
+                <img src="images/Gaussian_Fitted_Bead.jpg" alt="Gaussian fitted bead" />
+              </div>
+              <div class="thumb" onclick="setGalleryMain('micro', 'images/psf_theory.png', 'Theoretical PSF vs Gaussian fit')">
+                <img src="images/psf_theory.png" alt="PSF theory" />
+              </div>
+              <div class="thumb" onclick="setGalleryMain('micro', 'images/Predicted_Gaussian_Fit.jpg', 'Predicted Gaussian shape — 3D surface')">
+                <img src="images/Predicted_Gaussian_Fit.jpg" alt="Predicted Gaussian shape" />
+              </div>
+              <div class="thumb" onclick="setGalleryMain('micro', 'images/Real_Bead_Shape.jpg', 'Real bead 3D intensity profile')">
+                <img src="images/Real_Bead_Shape.jpg" alt="Real bead shape" />
+              </div>
+            </div>
+          </div>
+          <div class="pf-num">02</div>
+        </div>
+        <div class="pf-content" id="micro-gallery-ref" data-gallery="micro">
+          <div class="pf-tags">
+            <span class="ptag">Image Processing</span>
+            <span class="ptag">Sub-pixel</span>
+            <span class="ptag">NSF · CELL-MET</span>
+            <span class="ptag">MATLAB</span>
+          </div>
+          <h3 class="pf-title">Sub-Pixel Localization for Engineered Tissue Tracking</h3>
+          <p class="pf-desc">Built a MATLAB optical tracking pipeline for engineered cardiac tissues. Achieved sub-pixel bead localization (σ = 0.0188 px theoretical, 0.0819 px measured std dev across 10 images) and scaled throughput from 1 to <strong>96 simultaneous samples</strong> — enabling high-throughput drug-toxicity screening in cardiovascular research.</p>
+
+          <div class="pf-specs">
+            <div class="spec"><span class="spec-label">Accuracy</span><span class="spec-val">±0.15 µm · 1/50th pixel</span></div>
+            <div class="spec"><span class="spec-label">Scale-up</span><span class="spec-val">1 → 96 samples</span></div>
+            <div class="spec"><span class="spec-label">Method</span><span class="spec-val">Rotated 2D Gaussian Fitting</span></div>
+            <div class="spec"><span class="spec-label">Reference</span><span class="spec-val">Ma et al., Front. Bioeng. 2023</span></div>
+          </div>
+
+          <div class="pf-actions">
+            <button class="btn btn-primary btn-sm" onclick="openModal('microscope')"><i class="fas fa-expand-alt"></i> Full Case Study</button>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/37251575/" target="_blank" rel="noopener" class="btn btn-secondary btn-sm"><i class="fas fa-external-link-alt"></i> Related Paper</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- ── PROJECT 3: ROCKET NOZZLE ── -->
+      <article class="project-feature reveal" id="proj-nozzle">
+        <div class="pf-media">
+          <div class="pf-gallery" id="nozzle-gallery">
+            <!--
+              ADD NOZZLE IMAGES: Replace the placeholders below with real photos
+              Recommended images to add:
+              - images/nozzle-cad.jpg    → SolidWorks CAD screenshot
+              - images/nozzle-fea.jpg    → Von Mises stress result
+              - images/nozzle-printed.jpg → 3D printed part photo
+              - images/nozzle-assembly.jpg → Assembly with adapter
+
+              The CDR PDF already shows the CAD — screenshot those images
+              and save them in your images/ folder.
+            -->
+            <div class="gallery-main nozzle-bg">
+              <i class="fas fa-fire-flame-curved" style="font-size:3rem;color:var(--amber);opacity:0.4"></i>
+              <!--
+                Replace this with:
+                <img src="images/nozzle-fea.jpg" alt="Rocket Nozzle FEA Von Mises Stress" />
+              -->
+              <div class="placeholder-label">Add FEA / CAD image here · See guide</div>
+            </div>
+            <!-- Video embed slot -->
+            <div class="video-slot">
+              <div class="video-placeholder" id="videoPlaceholder">
+                <i class="fas fa-play-circle"></i>
+                <span>Rocket Nozzle Test Video</span>
+                <small>
+                  To add your video, replace this div with:<br/>
+                  <code>&lt;iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID"&gt;&lt;/iframe&gt;</code><br/>
+                  or for a local file:<br/>
+                  <code>&lt;video src="videos/nozzle-test.mp4" controls&gt;&lt;/video&gt;</code>
+                </small>
+                <!--
+                  ╔══════════════════════════════════════════╗
+                  ║  YOUTUBE EMBED (remove comment tags):    ║
+                  ║  <iframe                                  ║
+                  ║    src="https://www.youtube.com/embed/   ║
+                  ║    YOUR_VIDEO_ID_HERE"                    ║
+                  ║    title="Rocket Nozzle Test"            ║
+                  ║    allow="accelerometer; autoplay;       ║
+                  ║           clipboard-write;               ║
+                  ║           encrypted-media; gyroscope"    ║
+                  ║    allowfullscreen>                       ║
+                  ║  </iframe>                               ║
+                  ╚══════════════════════════════════════════╝
+
+                  LOCAL VIDEO (remove comment tags):
+                  <video controls poster="images/nozzle-thumb.jpg">
+                    <source src="videos/nozzle-test.mp4" type="video/mp4">
+                  </video>
+                -->
+              </div>
+            </div>
+          </div>
+          <div class="pf-num">03</div>
+        </div>
+        <div class="pf-content">
+          <div class="pf-tags">
+            <span class="ptag">Propulsion</span>
+            <span class="ptag">FEA</span>
+            <span class="ptag">3D Printing</span>
+            <span class="ptag">BURPG</span>
+          </div>
+          <h3 class="pf-title">Hybrid Rocket Nozzle Design & Testing</h3>
+          <p class="pf-desc">Designed, fabricated, and validated a hybrid rocket nozzle from first principles using isentropic flow equations. Ran Von Mises FEA in SolidWorks (max stress ~47% of yield strength, min FOS = 2.118), fabricated in ABS-like resin V2.0, and integrated into BURPG's hotfire test hardware.</p>
+
+          <div class="pf-specs">
+            <div class="spec"><span class="spec-label">Isp</span><span class="spec-val">274.6 s</span></div>
+            <div class="spec"><span class="spec-label">Thrust (opt.)</span><span class="spec-val">34.98 N</span></div>
+            <div class="spec"><span class="spec-label">Exit Velocity</span><span class="spec-val">2,691 m/s</span></div>
+            <div class="spec"><span class="spec-label">Min FOS</span><span class="spec-val">2.118 (bolt holes)</span></div>
+            <div class="spec"><span class="spec-label">Area Ratio</span><span class="spec-val">Ae/At = 6.521</span></div>
+            <div class="spec"><span class="spec-label">Reference</span><span class="spec-val">Sutton, Rocket Prop. Elements</span></div>
+          </div>
+
+          <div class="pf-actions">
+            <button class="btn btn-primary btn-sm" onclick="openModal('rocket-nozzle')"><i class="fas fa-expand-alt"></i> Full Case Study</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- ── PROJECT 4: FLIGHT SIM ── -->
+      <article class="project-feature reveal pf-reverse" id="proj-flightsim">
+        <div class="pf-media">
+          <div class="pf-placeholder sim-bg">
+            <i class="fas fa-rocket"></i>
+            <span>Flight Simulation</span>
+            <!--
+              ADD IMAGE: Replace .pf-placeholder with:
+              <img src="images/flight-sim.jpg" alt="Rocket Flight Simulation" class="pf-img" />
+              Suggested: OpenRocket or RASAero stability plot screenshot
+            -->
+            <small>Add sim screenshot here · See guide</small>
+          </div>
+          <div class="pf-num">04</div>
+        </div>
+        <div class="pf-content">
+          <div class="pf-tags">
+            <span class="ptag">Aerodynamics</span>
+            <span class="ptag">OpenRocket</span>
+            <span class="ptag">RASAero</span>
+            <span class="ptag">BURPG</span>
+          </div>
+          <h3 class="pf-title">Rocket Flight Simulation & Fin Optimization</h3>
+          <p class="pf-desc">Led aerodynamic modeling and fin geometry optimization for BURPG rockets. Used cross-validated simulations in RASAero and OpenRocket, sweeping span, chord, and sweep angle to maximize stability margin while minimizing drag — then integrated validated results with mass properties data.</p>
+
+          <div class="pf-specs">
+            <div class="spec"><span class="spec-label">Tools</span><span class="spec-val">RASAero · OpenRocket</span></div>
+            <div class="spec"><span class="spec-label">Role</span><span class="spec-val">Flight Sim & Fin Opt. Lead</span></div>
+            <div class="spec"><span class="spec-label">Validation</span><span class="spec-val">CAD mass-prop cross-check</span></div>
+          </div>
+
+          <div class="pf-actions">
+            <button class="btn btn-primary btn-sm" onclick="openModal('flight-sim')"><i class="fas fa-expand-alt"></i> Full Case Study</button>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       RESEARCH
+  ══════════════════════════════════════════ -->
+  <section id="research" class="section section-alt">
+    <div class="container">
+      <div class="section-label">/ 04 · RESEARCH</div>
+      <h2 class="section-title reveal">Research <span class="accent">Deep Dive</span></h2>
+
+      <!-- Research image strip — real figures from the ERN poster -->
+      <div class="research-img-strip reveal">
+        <figure class="rstrip-fig">
+          <img src="images/psf_theory.png" alt="Theoretical PSF and Gaussian Fit" />
+          <figcaption>Theoretical PSF vs. Gaussian Fit</figcaption>
+        </figure>
+        <figure class="rstrip-fig">
+          <img src="images/Gaussian_Fitting_curved_axis.jpg" alt="Gaussian Fitting geometry with principal axes" />
+          <figcaption>Gaussian Fitting Geometry</figcaption>
+        </figure>
+        <figure class="rstrip-fig">
+          <img src="images/Real_Bead_Shape.jpg" alt="Real bead 3D intensity profile" />
+          <figcaption>Real Bead Intensity Profile</figcaption>
+        </figure>
+        <figure class="rstrip-fig">
+          <img src="images/Predicted_Gaussian_Fit.jpg" alt="Predicted Gaussian shape" />
+          <figcaption>Predicted Gaussian Shape</figcaption>
+        </figure>
+      </div>
+
+      <div class="research-layout">
+
+        <!-- Main research card -->
+        <div class="research-main reveal">
+          <div class="research-header">
+            <div>
+              <span class="org-label">INSTITUTION</span>
+              <span class="org-name">BU Photonics Center — Bifano Lab</span>
+            </div>
+            <div class="research-badge">NSF · CELL-MET</div>
+          </div>
+
+          <div class="research-role">Undergraduate Researcher</div>
+          <div class="research-period"><i class="fas fa-calendar-alt"></i> September 2024 – Present</div>
+
+          <div class="research-highlights">
+            <div class="hl-item">
+              <div class="hl-icon"><i class="fas fa-crosshairs"></i></div>
+              <div class="hl-body">
+                <h4>Sub-Pixel Localization Algorithm</h4>
+                <p>Developed a MATLAB tool using rotated 2D Gaussian fitting adapted from radio-astronomy precision methods (Condon 1997). Detects bead centers at 1/50th pixel accuracy — equivalent to <strong>±0.15 µm spatial precision</strong> in tissue displacement measurement.</p>
+              </div>
+            </div>
+            <div class="hl-item">
+              <div class="hl-icon"><i class="fas fa-expand-arrows-alt"></i></div>
+              <div class="hl-body">
+                <h4>96× Throughput Scale-Up</h4>
+                <p>Rewrote the tracking pipeline to process entire 96-well plates simultaneously — increasing sample capacity from 1 to 96 and enabling pharmaceutical drug-toxicity screening at scale. Fidelity is comparable to FDA tissue-imaging protocols.</p>
+              </div>
+            </div>
+            <div class="hl-item">
+              <div class="hl-icon"><i class="fas fa-wave-square"></i></div>
+              <div class="hl-body">
+                <h4>PAW Wavefront Sensing System</h4>
+                <p>Implemented the Partitioned Aperture Wavefront (PAW) technique — splitting light through four off-axis lenses into quadrants, computing local tilt from intensity ratios (θ<sub>x</sub> = NA·(I₁−I₂−I₃+I₄)/I<sub>tot</sub>), and reconstructing deformable mirror surface profiles.</p>
+              </div>
+            </div>
+            <div class="hl-item">
+              <div class="hl-icon"><i class="fas fa-podium"></i></div>
+              <div class="hl-body">
+                <h4>2026 ERN Conference — AAAS/NSF</h4>
+                <p>Selected to present research at the nationally competitive Emerging Researchers National Conference, hosted by AAAS and NSF.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Side cards -->
+        <div class="research-side reveal reveal-delay">
+          <div class="side-card">
+            <div class="sc-icon amber"><i class="fas fa-rocket"></i></div>
+            <h3>BURPG</h3>
+            <span class="sc-label">Boston University Rocket Propulsion Group</span>
+            <p>Flight Simulation & Fin Optimization Lead. Aerodynamic modeling, stability analysis, and simulation-to-hardware validation for BURPG's active rocket program.</p>
+            <div class="sc-period">Sept 2024 – Present</div>
+          </div>
+
+          <div class="side-card">
+            <div class="sc-icon purple"><i class="fas fa-microchip"></i></div>
+            <h3>OPF Cleanroom</h3>
+            <span class="sc-label">Optoelectronic Processing Facility — BU</span>
+            <p>Full photolithographic wafer fabrication: spin coating, UV exposure through photomask, Ti/Au metal deposition via e-beam evaporation, and lift-off. Cleanroom-certified procedures.</p>
+            <div class="sc-period">Summer 2025</div>
+          </div>
+
+          <!-- Data card from poster -->
+          <div class="side-card data-card">
+            <div class="sc-icon cyan"><i class="fas fa-chart-bar"></i></div>
+            <h3>Key Results</h3>
+            <span class="sc-label">ERN Poster — Bead Distance Measurements</span>
+            <table class="data-table">
+              <thead><tr><th>Image</th><th>Distance (px)</th></tr></thead>
+              <tbody>
+                <tr><td>1</td><td>25.54</td></tr>
+                <tr><td>2</td><td>25.37</td></tr>
+                <tr><td>3</td><td>25.38</td></tr>
+                <tr><td>4</td><td>25.43</td></tr>
+                <tr><td>5</td><td>25.51</td></tr>
+              </tbody>
+            </table>
+            <div class="data-stat">σ = 0.0819 px · μ_theory = 0.0188 px</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       ACHIEVEMENTS
+  ══════════════════════════════════════════ -->
+  <section id="achievements" class="section">
+    <div class="container">
+      <div class="section-label">/ 05 · RECOGNITION</div>
+      <h2 class="section-title reveal">Awards & <span class="accent">Honors</span></h2>
+
+      <div class="awards-grid">
+        <div class="award-card reveal">
+          <div class="aw-icon"><i class="fas fa-infinity"></i></div>
+          <div class="aw-badge">Full Scholarship</div>
+          <h3>QuestBridge Scholar</h3>
+          <p>Full-ride scholarship recognizing exceptional first-generation student achievement and leadership potential.</p>
+        </div>
+        <div class="award-card reveal reveal-delay">
+          <div class="aw-icon"><i class="fas fa-trophy"></i></div>
+          <div class="aw-badge">3× National 1st</div>
+          <h3>Rice University Engineering</h3>
+          <p>Swept all three Rice University competitions nationally — Engineering Challenge, STEM Presentation, and Engineering Competition — presenting a carbon capture systems design.</p>
+        </div>
+        <div class="award-card reveal reveal-delay-2">
+          <div class="aw-icon"><i class="fas fa-flask"></i></div>
+          <div class="aw-badge">Year-Long Award</div>
+          <h3>UROP Research Award</h3>
+          <p>BU Undergraduate Research Opportunities Program year-long recognition (Fall 2024 – Spring 2025) for sustained research excellence.</p>
+        </div>
+        <div class="award-card reveal reveal-delay-3">
+          <div class="aw-icon"><i class="fas fa-star"></i></div>
+          <div class="aw-badge">Top 20 / 13,000</div>
+          <h3>POSSE Scholar Finalist</h3>
+          <p>Ranked in the top 20 of over 13,000 applicants — recognizing exceptional leadership potential in higher education.</p>
+        </div>
+        <div class="award-card reveal reveal-delay">
+          <div class="aw-icon"><i class="fas fa-microscope"></i></div>
+          <div class="aw-badge">NSF Program</div>
+          <h3>CELL-MET Researcher</h3>
+          <p>Selected among limited undergraduates to conduct research in the NSF-funded CELL-MET Engineering Research Center at BU Photonics Center.</p>
+        </div>
+        <div class="award-card reveal reveal-delay-2">
+          <div class="aw-icon"><i class="fas fa-award"></i></div>
+          <div class="aw-badge">$10,000/yr</div>
+          <h3>Richard L. Hildreth Scholarship</h3>
+          <p>Annual merit scholarship awarded by Boston University College of Engineering.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       CONTACT
+  ══════════════════════════════════════════ -->
+  <section id="contact" class="section section-alt">
+    <div class="container">
+      <div class="section-label">/ 06 · CONTACT</div>
+      <h2 class="section-title reveal">Let's <span class="accent">Connect</span></h2>
+      <p class="section-subtitle reveal">Open to research collaborations, internships, and aerospace opportunities</p>
+
+      <div class="contact-layout">
+        <div class="contact-links reveal">
+          <a href="mailto:alan2006@bu.edu" class="contact-link">
+            <div class="cl-icon"><i class="fas fa-envelope"></i></div>
+            <div class="cl-body"><span class="cl-label">Email</span><span class="cl-val">alan2006@bu.edu</span></div>
+            <i class="fas fa-arrow-right cl-arrow"></i>
+          </a>
+          <a href="https://linkedin.com/in/alan-bonilla" target="_blank" rel="noopener" class="contact-link">
+            <div class="cl-icon"><i class="fab fa-linkedin-in"></i></div>
+            <div class="cl-body"><span class="cl-label">LinkedIn</span><span class="cl-val">linkedin.com/in/alan-bonilla</span></div>
+            <i class="fas fa-arrow-right cl-arrow"></i>
+          </a>
+          <!-- Replace with actual GitHub username -->
+          <a href="https://github.com/YOUR-GITHUB-USERNAME" target="_blank" rel="noopener" class="contact-link">
+            <div class="cl-icon"><i class="fab fa-github"></i></div>
+            <div class="cl-body"><span class="cl-label">GitHub</span><span class="cl-val">github.com/YOUR-USERNAME</span></div>
+            <i class="fas fa-arrow-right cl-arrow"></i>
+          </a>
+          <a href="tel:+18327799225" class="contact-link">
+            <div class="cl-icon"><i class="fas fa-phone"></i></div>
+            <div class="cl-body"><span class="cl-label">Phone</span><span class="cl-val">(832) 779-9225</span></div>
+            <i class="fas fa-arrow-right cl-arrow"></i>
+          </a>
+        </div>
+
+        <div class="contact-form-wrap reveal reveal-delay">
+          <div class="form-header">SEND A MESSAGE</div>
+          <div class="contact-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="fname">Name</label>
+                <input type="text" id="fname" placeholder="Your name" />
+              </div>
+              <div class="form-group">
+                <label for="femail">Email</label>
+                <input type="email" id="femail" placeholder="your@email.com" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="fsubject">Subject</label>
+              <input type="text" id="fsubject" placeholder="Research opportunity / Internship / etc." />
+            </div>
+            <div class="form-group">
+              <label for="fmessage">Message</label>
+              <textarea id="fmessage" rows="4" placeholder="Tell me about your project or opportunity..."></textarea>
+            </div>
+            <button class="btn btn-primary btn-full" onclick="handleFormSubmit()">
+              <i class="fas fa-paper-plane"></i> Send Message
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer id="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-logo">
+          <span class="lb">[</span>ABS<span class="lb">]</span>
+          <span class="footer-sub">Alan Bonilla Santos · BU '28</span>
+        </div>
+        <div class="footer-social">
+          <a href="mailto:alan2006@bu.edu" aria-label="Email"><i class="fas fa-envelope"></i></a>
+          <a href="https://linkedin.com/in/alan-bonilla" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://github.com/YOUR-GITHUB-USERNAME" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        </div>
+        <div class="footer-nav">
+          <a href="#about">About</a><a href="#projects">Projects</a>
+          <a href="#research">Research</a><a href="#contact">Contact</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>Designed & Built by Alan Bonilla Santos · Boston, MA</span>
+        <span class="footer-status"><span class="status-dot"></span> Available for opportunities</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ══════════════════════════════════════════
+       MODALS
+  ══════════════════════════════════════════ -->
+
+  <!-- Modal: MEMS -->
+  <div class="modal-overlay" id="modal-mems" onclick="closeModalOnOverlay(event,'mems')">
+    <div class="modal">
+      <button class="modal-close" onclick="closeModal('mems')"><i class="fas fa-times"></i></button>
+      <div class="modal-header">
+        <span class="modal-num">PROJECT 01</span>
+        <h2 class="modal-title">MEMS Deformable Mirror System</h2>
+        <div class="modal-tags">
+          <span class="ptag">Adaptive Optics</span><span class="ptag">MATLAB</span>
+          <span class="ptag">MEMS</span><span class="ptag">Wavefront Control</span>
+        </div>
+      </div>
+      <div class="modal-body">
+        <div class="modal-section">
+          <h4><i class="fas fa-bullseye"></i> Problem</h4>
+          <p>Optical systems in widefield fluorescence microscopy suffer from wavefront aberrations that degrade resolution. Correcting these in real time at the micron scale requires precise actuation of a deformable mirror surface with hundreds of individually controllable actuators.</p>
+        </div>
+        <div class="modal-section">
+          <h4><i class="fas fa-lightbulb"></i> Approach</h4>
+          <p>Operated Boston Micromachines MEMS deformable mirrors to reshape optical wavefronts. The Partitioned Aperture Wavefront (PAW) technique splits light through four off-axis lenses into quadrants; analyzing the intensity imbalance between quadrant pairs reveals local tilt: θ<sub>x</sub> = NA·(I₁−I₂−I₃+I₄)/I<sub>tot</sub>. Developed MATLAB scripts for automated actuation sequences, surface-response characterization (influence function mapping), and iterative calibration routines.</p>
+        </div>
+        <div class="modal-section">
+          <h4><i class="fas fa-wrench"></i> Tools Used</h4>
+          <div class="modal-tools">
+            <span>MATLAB</span><span>MEMS DM (Boston Micromachines)</span>
+            <span>PAW Wavefront Sensor</span><span>Optical Alignment</span><span>SolidWorks</span>
+          </div>
+        </div>
+        <div class="modal-section">
+          <h4><i class="fas fa-chart-line"></i> Results & Impact</h4>
+          <p>Built applied expertise in adaptive optics systems used in cutting-edge biological microscopy and laser communications. Work feeds into the lab's ongoing conjugate adaptive optics research platform (Li et al., Optica 2015; Bifano et al., OE 2021).</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: Microscope -->
+  <div class="modal-overlay" id="modal-microscope" onclick="closeModalOnOverlay(event,'microscope')">
+    <div class="modal">
+      <button class="modal-close" onclick="closeModal('microscope')"><i class="fas fa-times"></i></button>
+      <div class="modal-header">
+        <span class="modal-num">PROJECT 02</span>
+        <h2 class="modal-title">Sub-Pixel Localization for Engineered Tissue Tracking</h2>
+        <div class="modal-tags">
+          <span class="ptag">MATLAB</span><span class="ptag">Gaussian Fitting</span>
+          <span class="ptag">NSF CELL-MET</span><span class="ptag">Biomedical</span>
+        </div>
+      </div>
+      <div class="modal-body">
+        <div class="modal-gallery-row">
+          <img src="images/Bead_Images.jpg" alt="Bead images" />
+          <img src="images/Gaussian_Fitted_Bead.jpg" alt="Gaussian fitted bead" />
+          <img src="images/psf_theory.png" alt="PSF theory" />
+        </div>
+        <div class="modal-section">
+          <h4><i class="fas fa-bullseye"></i> Problem</h4>
+          <p>Cardiovascular disease drives nearly a third of drug failures through unforeseen cardiac toxicity. Engineered tissue assays use fluorescent microbeads as fiducial markers to measure contractile force — but existing pipelines only processed one sample at a time and lacked sub-pixel precision.</p>
+        </div>
+        <div class="modal-section">
+          <h4><i class="fas fa-lightbulb"></i> Approach</h4>
+          <p>Modeled each fluorescent bead as a 2D rotated Gaussian: F(X,Y) = A·exp(−[(X̄−x₀)²/2σ<sub>x</sub>² + (Ȳ−y₀)²/2σ<sub>y</sub>²]), where X̄,Ȳ are the rotated coordinates. Fitted this model to live bead images to extract sub-pixel center coordinates. Validated accuracy by imaging PDMS blocks with fixed bead pairs: computed inter-bead distance stayed within σ = 0.0819 px across 10 repositioned images (theoretical limit: 0.0188 px). Then parallelized the entire pipeline across all wells in a 96-well plate format.</p>
+        </div>
+        <div class="modal-section">
+          <h4><i class="fas fa-wrench"></i> Tools Used</h4>
+          <div class="modal-tools">
+            <span>MATLAB</span><span>2D Gaussian Fitting</span><span>Sub-pixel Localization</span>
+            <span>Fluorescence Microscopy</span><span>PSF Theory (Fourier)</span>
+          </div>
+        </div>
+        <div class="modal-section">
+          <h4><i class="fas fa-chart-line"></i> Results & Impact</h4>
+          <p>Achieved <strong>96× throughput scale-up</strong> with ±0.15 µm precision, FDA-comparable fidelity, and selected for presentation at the 2026 ERN Conference (AAAS/NSF). System enables high-throughput cardiac drug-toxicity screening in regenerative medicine research.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: Rocket Nozzle -->
+  <div class="modal-overlay" id="modal-rocket-nozzle" onclick="closeModalOnOverlay(event,'rocket-nozzle')">
+    <div class="modal">
+      <button class="modal-close" onclick="closeModal('rocket-nozzle')"><i class="fas fa-times"></i></button>
+      <div class="modal-header">
+        <span class="modal-num">PROJECT 03</span>
+        <h2 class="modal-title">Hybrid Rocket Nozzle Design & Testing</h2>
+        <div class="modal-tags">
+          <span class="ptag">Propulsion</span><span class="ptag">SolidWorks FEA</span>
+          <span class="ptag">3D Printing</span><span class="ptag">Isentropic Flow</span>
+        </div>
+      </div>
+      <div class="modal-body">
+        <div class="modal-specs-table">
+          <div class="mst-row"><span>Specific Impulse</span><span>274.6 s</span></div>
+          <div class="mst-row"><span>Optimal Thrust</span><span>34.98 N (252.5 lbf)</span></div>
+          <div class="mst-row"><span>Sea-Level Thrust</span><span>11.77 N (84.9 lbf)</span></div>
+          <div class="mst-row"><span>Exit Velocity</span><span>2,691 m/s</span></div>
+          <div class="mst-row"><span>Critical Pressure Ratio</span><span>0.578</span></div>
+          <div class="mst-row"><span>Area Ratio (Ae/At)</span><span>6.521</span></div>
+          <div class="mst-row"><span>Throat Diameter</span><span>7 mm</span></div>
+          <div class="mst-row"><span>Exit Diameter</span><span>18 mm</span></div>
+          <div class="mst-row"><span>Nozzle Length (80%)</span><span>17 mm</span></div>
+          <div class="mst-row highlight"><span>Min Factor of Safety</span><span>2.118</span></div>
+          <div class="mst-row highlight"><span>Max Von Mises Stress</span><span>~47% of yield strength</span></div>
+        </div>
+        <div class="modal-section">
+          <h4><i class="fas fa-bullseye"></i> Problem</h4>
+          <p>Design a hybrid rocket nozzle for BURPG's hotfire test program that survives 80 psi chamber and 46 psi throat pressures, optimized for specific impulse and manufacturable via 3D printing.</p>
+        </div>
+        <div class="modal-section">
+          <h4><i class="fas fa-lightbulb"></i> Approach</h4>
+          <p>Derived geometry from isentropic flow equations (Sutton, <em>Rocket Propulsion Elements</em>) — computing area ratio, throat/exit diameters, and 80% bell contour nozzle length. Custom material properties entered for ABS-like resin V2.0 (E = 2000 N/mm², yield = 25.2 N/mm²). FEA applied chamber pressure (80 psi, red) and throat pressure (46 psi, blue) simultaneously; bolt-hole regions fixed as constraints. Assembly connected via 6× ¼"-20 nuts and bolts to a 1" NPT chamber adapter.</p>
+        </div>
+        <div class="modal-section">
+          <h4><i class="fas fa-chart-line"></i> Results & Impact</h4>
+          <p>Von Mises max stress = 1.19×10⁷ N/m² (47% of yield), minimum FOS = 2.118 at bolt holes — design declared structurally safe. Results and safety documentation integrated into BURPG's hotfire test program.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: Flight Sim -->
+  <div class="modal-overlay" id="modal-flight-sim" onclick="closeModalOnOverlay(event,'flight-sim')">
+    <div class="modal">
+      <button class="modal-close" onclick="closeModal('flight-sim')"><i class="fas fa-times"></i></button>
+      <div class="modal-header">
+        <span class="modal-num">PROJECT 04</span>
+        <h2 class="modal-title">Rocket Flight Simulation & Fin Optimization</h2>
+        <div class="modal-tags">
+          <span class="ptag">Aerodynamics</span><span class="ptag">OpenRocket</span>
+          <span class="ptag">RASAero</span><span class="ptag">BURPG</span>
+        </div>
+      </div>
+      <div class="modal-body">
+        <div class="modal-section">
+          <h4><i class="fas fa-bullseye"></i> Problem</h4>
+          <p>Ensure stable rocket flight by optimizing fin geometry — maximizing stability margin (center-of-pressure behind center-of-mass) while minimizing aerodynamic drag to maximize apogee altitude.</p>
+        </div>
+        <div class="modal-section">
+          <h4><i class="fas fa-lightbulb"></i> Approach</h4>
+          <p>Cross-validated aerodynamic models in both RASAero and OpenRocket to bound prediction uncertainty. Parametrically swept fin span, root chord, tip chord, and sweep angle to build a stability-vs-drag Pareto front. Validated simulated stability margins against SolidWorks mass-properties data. Coordinated results delivery across design and test teams.</p>
+        </div>
+        <div class="modal-section">
+          <h4><i class="fas fa-wrench"></i> Tools Used</h4>
+          <div class="modal-tools">
+            <span>RASAero</span><span>OpenRocket</span><span>SolidWorks</span><span>Mass Properties Analysis</span>
+          </div>
+        </div>
+        <div class="modal-section">
+          <h4><i class="fas fa-chart-line"></i> Results & Impact</h4>
+          <p>Delivered a validated fin configuration exceeding the minimum stability margin requirement with reduced drag, directly improving predicted apogee. Integrated into BURPG's active design program.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
