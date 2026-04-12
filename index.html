@@ -110,7 +110,10 @@
               ║       class="profile-photo" />       ║
               ╚══════════════════════════════════════╝
             -->
-            <img src="alan.jpg" alt="Alan Bonilla Santos" class="profile-photo" />
+            <div class="photo-placeholder">
+              <i class="fas fa-user-astronaut"></i>
+              <span>Add your photo here<br/><small>Replace with &lt;img&gt; tag<br/>See guide below</small></span>
+            </div>
             <div class="photo-frame-corner ptl"></div>
             <div class="photo-frame-corner ptr"></div>
             <div class="photo-frame-corner pbl"></div>
@@ -277,7 +280,8 @@
 
       <!-- ── PROJECT 1: MEMS ── -->
       <article class="project-feature reveal" id="proj-mems">
-      <img src="Continuous-DM.gif" alt="MEMS Deformable Mirror" class="pf-img" />          <!--
+        <div class="pf-media">
+          <!--
             ADD IMAGE: Replace .pf-placeholder with:
             <img src="images/mems-mirror.jpg" alt="MEMS Deformable Mirror" class="pf-img" />
             Suggested: Screenshot from the OE paper Fig. 1 or your own lab photo
@@ -317,28 +321,25 @@
       <article class="project-feature reveal pf-reverse" id="proj-microscope">
         <div class="pf-media">
           <!-- Real research images from the ERN poster -->
-<div class="pf-gallery">
+          <div class="pf-gallery">
             <div class="gallery-main">
-              <img src="Real Bead Shape.jpg" alt="Real bead 3D intensity profile" id="main-tissue-img" />
-              <div class="gallery-caption" id="tissue-caption">
-                Real bead 3D intensity profile
-              </div>
+              <img src="images/Bead_Images.jpg" alt="Fluorescent bead images — sub-pixel localization" />
+              <div class="gallery-caption">Fluorescent beads imaged across 96-well plates</div>
             </div>
             <div class="gallery-thumbs">
-              <div class="thumb" onclick="setGalleryMain('micro', 'Gaussian Fitted Bead.jpg', 'Gaussian-fitted bead center detection')">
-                <img src="Gaussian Fitted Bead.jpg" alt="Gaussian fitted bead" />
+              <div class="thumb" onclick="setGalleryMain('micro', 'images/Gaussian_Fitted_Bead.jpg', 'Gaussian-fitted bead center detection')">
+                <img src="images/Gaussian_Fitted_Bead.jpg" alt="Gaussian fitted bead" />
               </div>
-              <div class="thumb" onclick="setGalleryMain('micro', 'psf theory.png', 'Theoretical PSF vs Gaussian fit')">
-                <img src="psf theory.png" alt="PSF theory" />
+              <div class="thumb" onclick="setGalleryMain('micro', 'images/psf_theory.png', 'Theoretical PSF vs Gaussian fit')">
+                <img src="images/psf_theory.png" alt="PSF theory" />
               </div>
-              <div class="thumb" onclick="setGalleryMain('micro', 'Predicted Gaussian Fit.jpg', 'Predicted Gaussian shape — 3D surface')">
-                <img src="Predicted Gaussian Fit.jpg" alt="Predicted Gaussian shape" />
+              <div class="thumb" onclick="setGalleryMain('micro', 'images/Predicted_Gaussian_Fit.jpg', 'Predicted Gaussian shape — 3D surface')">
+                <img src="images/Predicted_Gaussian_Fit.jpg" alt="Predicted Gaussian shape" />
               </div>
-              <div class="thumb" onclick="setGalleryMain('micro', 'Real Bead Shape.jpg', 'Real bead 3D intensity profile')">
-                <img src="Real Bead Shape.jpg" alt="Real bead shape" />
+              <div class="thumb" onclick="setGalleryMain('micro', 'images/Real_Bead_Shape.jpg', 'Real bead 3D intensity profile')">
+                <img src="images/Real_Bead_Shape.jpg" alt="Real bead shape" />
               </div>
             </div>
-          </div>
           </div>
           <div class="pf-num">02</div>
         </div>
@@ -365,20 +366,11 @@
           </div>
         </div>
       </article>
-<img src="von misses stress fea.png" alt="Rocket Nozzle FEA Stress Analysis" class="pf-img" />
+
       <!-- ── PROJECT 3: ROCKET NOZZLE ── -->
       <article class="project-feature reveal" id="proj-nozzle">
         <div class="pf-media">
           <div class="pf-gallery" id="nozzle-gallery">
-            <div style="display: flex; gap: 10px; margin-top: 15px; justify-content: space-between;">
-  <img src="front view fea.png" alt="Front View FEA" style="width: 32%; border-radius: 6px; border: 1px solid #333;">
-  <img src="side view fea.png" alt="Side View FEA" style="width: 32%; border-radius: 6px; border: 1px solid #333;">
-  <img src="pressure FEA.png" alt="Pressure FEA" style="width: 32%; border-radius: 6px; border: 1px solid #333;">
-</div>
-            <video controls width="100%" poster="rocket hip fire assembly.jpg" style="border-radius: 8px;">
-  <source src="IMG_9748~2.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
             <!--
               ADD NOZZLE IMAGES: Replace the placeholders below with real photos
               Recommended images to add:
